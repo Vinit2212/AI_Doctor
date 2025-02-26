@@ -1,26 +1,35 @@
-# AI Doctor with Vision and Voice
+# 🏥 AI_Doctor
 
-AI Doctor with Vision and Voice is an interactive, AI-powered web application that provides virtual medical diagnostics by analyzing your voice and a scalp image. It leverages cutting-edge APIs and deep learning models to convert speech to text, analyze images, generate a medical diagnosis, and produce natural-sounding audio responses.
+AI_Doctor is an AI-powered medical diagnostic assistant that utilizes multimodal Large Language Models (LLMs) to analyze images and provide medical insights based on user queries. This project leverages the **GROQ API** to process and interpret images, enabling users to receive preliminary diagnoses for skin conditions.
 
-## Features
+## 🚀 Features
 
-- **Speech-to-Text Conversion:** Uses the Groq API to transcribe patient audio.
-- **Image Analysis:** Processes scalp images with a pre-trained deep learning model (ResNet50) using PyTorch and OpenCV.
-- **Medical Diagnosis:** Generates an expert medical response via OpenAI's GPT-4.
-- **Text-to-Speech Conversion:** Converts the AI-generated response into natural-sounding audio using ElevenLabs API.
-- **Interactive Web Interface:** Built with Gradio for an intuitive user experience.
+- 📸 **Image-based diagnosis** – Upload an image and get AI-powered analysis.
+- 🎙 **Voice-based interaction** – Convert speech to text and vice versa.
+- 🤖 **GROQ Multimodal LLM Integration** – Uses the **llama-3.2-90b-vision-preview** model.
+- 📝 **Text-based queries** – Users can describe their symptoms for better insights.
+- 🔗 **Real-time AI responses** – Quick and efficient results.
+- 🌐 **Gradio-based UI** – Interactive web application for easy access.
 
-## Project Structure
+## 🏗 Project Structure
+AI_Doctor/
+│── .env                     # API keys 
+│── brain_of_the_doctor.py    # Core script for image processing and AI analysis
+│── voice_of_the_doctor.py    # Converts AI responses to speech (text-to-speech)
+│── voice_of_the_patient.py   # Converts patient’s voice input to text (speech-to-text)
+│── gradio_app.py             # Web-based UI using Gradio
+│── README.md                 # Project documentation
+│── requirements.txt          # Python dependencies
 
-- `gradio_app.py`: Main application integrating all components using Gradio.
-- `voice_of_the_patient.py`: Manages audio recording and speech-to-text transcription.
-- `voice_of_the_doctor.py`: Converts text responses into speech.
-- `image_analysis.py`: Processes and analyzes scalp images.
-- `doctor_response.py`: Generates the AI doctor’s response using OpenAI's API.
 
-## Installation
+##  1. Installation & Setup 🔧
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/AI_Doctor.git
-   cd AI_Doctor
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/your-username/AI_Doctor.git
+cd AI_Doctor
+
+## 2.Create a Virtual Environment (Recommended)
+python -m venv venv
+source venv/bin/activate  # For macOS/Linux
+venv\Scripts\activate     # For Windows
